@@ -1,4 +1,4 @@
-# Cteam-organograma
+# Gteam-organograma
 
 ## Objetivos: 
   - Criar um organograma de forma dinâmica utilizando um formulário em react.js
