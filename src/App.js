@@ -25,7 +25,7 @@ function App() {
     {
       nome: 'Guias',
       corPrimaria: '#ffba05',
-      corSecundaria: '#fff509'
+      corSecundaria: '#fffedf'
     }
   ]
 
@@ -40,8 +40,8 @@ function App() {
 
       <Banner />
       <Formulario aoMembroCadastrado={membro => aoNovoMembroAdiciconado(membro)} />
-      {times.map(time => <Time nome={time.nome} />)}
-      
+      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
+
 
     </div>
   );
