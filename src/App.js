@@ -29,6 +29,8 @@ function App() {
     }
   ]
 
+
+
   const [membros, setMembros] = useState([])
 
   const aoNovoMembroAdiciconado = (membro) => {
@@ -39,9 +41,15 @@ function App() {
     <div className="App">
 
       <Banner />
-      <Formulario times= {times.map(time => time.nome)} aoMembroCadastrado={membro => aoNovoMembroAdiciconado(membro)} />
+      <Formulario times={times.map(time => time.nome)} aoMembroCadastrado={membro => aoNovoMembroAdiciconado(membro)} />
 
-      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
+      {times.map(time => <Time
+        key={time.nome}
+        nome={time.nome}
+        corPrimaria={time.corPrimaria}
+        corSecundaria={time.corSecundaria}
+        membros={membros.filter(membro => membro.time === time.nome )}
+      />)}
 
 
     </div>
