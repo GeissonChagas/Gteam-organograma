@@ -34,7 +34,6 @@ function App() {
   const [membros, setMembros] = useState([])
 
   const aoNovoMembroAdiciconado = (membro) => {
-    console.log(membro)
     setMembros([...membros, membro])
   }
   return (
