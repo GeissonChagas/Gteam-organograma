@@ -29,7 +29,9 @@ function App() {
     }
   ]
 
-
+  function deletarMembro () {
+    console.log('deletando membro')
+  }
 
   const [membros, setMembros] = useState([])
 
@@ -42,12 +44,14 @@ function App() {
       <Banner />
       <Formulario times={times.map(time => time.nome)} aoMembroCadastrado={membro => aoNovoMembroAdiciconado(membro)} />
 
-      {times.map(time => <Time
+      {times.map(time => 
+      <Time
         key={time.nome}
         nome={time.nome}
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         membros={membros.filter(membro => membro.time === time.nome )}
+        aoDeletar={deletarMembro}
       />)}
 
 
