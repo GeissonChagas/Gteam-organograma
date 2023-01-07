@@ -5,7 +5,7 @@ const Membro = ({ nome, imagem, cargo, corDeFundo, aoDeletar }) => {
     return (
         
         <div className='membro'>
-            <BsTrash className='deletar' size={25} onClick={aoDeletar} />
+            <BsTrash className='deletar' size={25} onClick={() => aoDeletar} />
             <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
                 <img src={imagem} alt={nome + " avatar"} />
             </div>

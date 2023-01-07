@@ -30,7 +30,6 @@ function App() {
   ]
 
   function deletarMembro () {
-    console.log('deletando membro')
   }
 
   const [membros, setMembros] = useState([])
